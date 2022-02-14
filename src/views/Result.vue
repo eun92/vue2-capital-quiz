@@ -72,13 +72,15 @@ export default {
     font-size: rem(40);
   }
 
-  &__btn-home {
+  &__btn-home.el-button {
     position: absolute;
     bottom: 0;
     right: 0;
+    padding: rem(5) rem(8);
 
     .text {
       margin-left: rem(5);
+      font-size: rem(16);
     }
   }
 
