@@ -260,10 +260,10 @@ export default {
         return
       // 패스할 시 결과화면 답변에 패스로 저장
       this.input = "패스"
-      // 초기화
-      this.init()
       // 오답처리
       this.filterAnswer("wrong")
+      // 초기화
+      this.init()
     },
 
     // 홈으로
