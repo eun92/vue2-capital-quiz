@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <meta
+      property="og:url"
+      content="https://stoic-mestorf-566c14.netlify.app"
+    />
+    <meta property="og:type" content="미니게임" />
+    <meta property="og:title" content="세계 국기 퀴즈" />
+    <meta
+      property="og:description"
+      content="국기 이미지를 보고 국가를 맞춰보세요!"
+    />
+    <meta
+      property="og:image"
+      content="https://stoic-mestorf-566c14.netlify.app/img/thumbnail.png"
+    />
+
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+    <title>세계 국기 퀴즈</title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
