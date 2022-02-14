@@ -28,7 +28,7 @@
 
     <!-- 정답 입력칸 -->
     <el-input
-      placeholder="정답을 입력하세요."
+      placeholder="정답 입력 후 enter"
       v-model="input"
       clearable
       ref="input"
@@ -125,7 +125,7 @@ export default {
     this.getRandomFlag()
   },
   mounted() {
-    this.initInput()
+    this.init()
   },
   methods: {
     ...mapMutations(["SET_RIGHT_ANSWER_RESULT", "SET_WRONG_ANSWER_RESULT"]),
@@ -190,8 +190,11 @@ export default {
       this.rightAnswer = arr[randomFlag].country_nm
     },
 
-    // input 초기화(포커스)
-    initInput() {
+    // 초기화
+    init() {
+      // 힌트 초기화
+      this.isActive = false
+      // input 초기화(포커스)
       this.input = ""
       this.$nextTick(() => this.$refs.input.focus())
     },
@@ -204,6 +207,11 @@ export default {
       // 정/오답 부모 엘리먼트 보이기
       this.isCheckAnswer = true
 
+      // 아무것도 입력하지 않았을 경우 패스로 간주
+      if (this.input.trim() == "") {
+        this.input = "패스"
+      }
+
       if (this.input === this.rightAnswer) {
         // 정답이면 정답 표시 후 정답 결과 목록에 추가
         this.isRightAnswer = true
@@ -215,15 +223,14 @@ export default {
       }
 
       setTimeout(() => {
+        // 국기 랜덤 추출
+        this.getRandomFlag().then(() => {
+          // 초기화
+          this.init()
+        })
         // 정/오답 부모 엘리먼트 감추기
         this.isCheckAnswer = false
-        // 힌트 초기화
-        this.isActive = false
-        // input 초기화
-        this.initInput()
-        // 국기 랜덤 추출
-        this.getRandomFlag()
-      }, 1500)
+      }, 2000)
     },
 
     // 정답/오답 필터
@@ -250,12 +257,13 @@ export default {
         return
       // 패스할 시 결과화면 답변에 패스로 저장
       this.input = "패스"
+      // 새 랜덤 국기 불러오기
+      this.getRandomFlag().then(() => {
+        // 초기화
+        this.init()
+      })
       // 오답처리
       this.filterAnswer("wrong")
-      // 새 랜덤 국기 불러오기
-      this.getRandomFlag()
-      // 입력창 초기화
-      this.initInput()
     },
 
     // 홈으로
