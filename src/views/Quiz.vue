@@ -103,6 +103,7 @@ import { mapState, mapMutations } from "vuex"
 export default {
   data() {
     return {
+      dataItmes: [],
       quizCnt: "0",
       flagImage: "",
       letterLength: "",
@@ -122,13 +123,26 @@ export default {
     ...mapState(["quizLength"]),
   },
   created() {
-    this.getRandomFlag()
-  },
-  mounted() {
-    this.init()
+    this.fetchData()
   },
   methods: {
     ...mapMutations(["SET_RIGHT_ANSWER_RESULT", "SET_WRONG_ANSWER_RESULT"]),
+
+    // 초기화
+    init() {
+      // 랜덤 데이터 추출
+      this.getRandomFlag()
+
+      // 힌트 초기화
+      this.isActive = false
+
+      // 정/오답 부모 엘리먼트 초기화
+      this.isCheckAnswer = false
+
+      // input 초기화(포커스)
+      this.input = ""
+      this.$nextTick(() => this.$refs.input.focus())
+    },
 
     // 데이터 페치
     fetchData() {
@@ -137,14 +151,21 @@ export default {
         "myEKkrNA12FMXdmrvXUyQkc2bxaUAaz4zaub1rcC5AEjteRvgHPPaQfk43RPpMxxr8aTbAXJO8mr%2Fa1ipxYwSA%3D%3D"
       const dataLength = 196
 
-      return axios
+      axios
         .get(
           `//apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${myKey}&pageNo=1&numOfRows=${dataLength}`
         )
         .then((response) => {
           // 국기 데이터
           const { data } = response.data
-          return data
+          // return data
+
+          // 컴포넌트 내 변수에 데이터 할당
+          this.dataItmes = data
+          console.log(this.dataItmes)
+
+          // 처음에 데이터 가져온 후 초기화 함수 호출
+          this.init()
         })
     },
 
@@ -154,33 +175,29 @@ export default {
     },
 
     // 랜덤 데이터 추출 (중복없이)
-    async getRandomFlag() {
-      try {
-        // 데이터(배열) 가져오기
-        const arr = await this.fetchData()
-        // 랜덤으로 국기 인덱스 뽑기
-        const randomFlag = Math.floor(Math.random() * arr.length)
+    getRandomFlag() {
+      // 데이터(배열) 변수 할당
+      const arr = this.dataItmes
+      // 랜덤으로 국기 인덱스 뽑기
+      const randomFlag = Math.floor(Math.random() * arr.length)
 
-        // 랜덤 국기로 채워진 퀴즈 배열 길이가 총 문제 개수와 같을 때(전부 다 풀었을 때) 결과 페이지로 이동
-        if (this.quizItmes.length == this.quizLength) {
-          this.$router.push("/result").catch(() => {})
-          return false
-        }
+      // 랜덤 국기로 채워진 퀴즈 배열 길이가 총 문제 개수와 같을 때(전부 다 풀었을 때) 결과 페이지로 이동
+      if (this.quizItmes.length == this.quizLength) {
+        this.$router.push("/result").catch(() => {})
+        return false
+      }
 
-        // 중복이 없으면
-        if (this.quizItmes.indexOf(randomFlag) === -1) {
-          // 퀴즈 배열에 랜덤 인덱스 추가
-          this.quizItmes.push(randomFlag)
-          // 퀴즈 번호 증가
-          this.quizCnt++
-          // 이미지 출력
-          this.showFlagImage(arr, randomFlag)
-        } else {
-          // 중복이 있으면 재실행
-          this.getRandomFlag()
-        }
-      } catch {
-        console.log("error")
+      // 중복이 없으면
+      if (this.quizItmes.indexOf(randomFlag) === -1) {
+        // 퀴즈 배열에 랜덤 인덱스 추가
+        this.quizItmes.push(randomFlag)
+        // 퀴즈 번호 증가
+        this.quizCnt++
+        // 이미지 출력
+        this.showFlagImage(arr, randomFlag)
+      } else {
+        // 중복이 있으면 재실행
+        this.getRandomFlag()
       }
     },
 
@@ -188,15 +205,6 @@ export default {
     showFlagImage(arr, randomFlag) {
       this.flagImage = arr[randomFlag].download_url
       this.rightAnswer = arr[randomFlag].country_nm
-    },
-
-    // 초기화
-    init() {
-      // 힌트 초기화
-      this.isActive = false
-      // input 초기화(포커스)
-      this.input = ""
-      this.$nextTick(() => this.$refs.input.focus())
     },
 
     // 정답/오답 체크
@@ -223,14 +231,9 @@ export default {
       }
 
       setTimeout(() => {
-        // 국기 랜덤 추출
-        this.getRandomFlag().then(() => {
-          // 초기화
-          this.init()
-        })
-        // 정/오답 부모 엘리먼트 감추기
-        this.isCheckAnswer = false
-      }, 2000)
+        // 초기화
+        this.init()
+      }, 1500)
     },
 
     // 정답/오답 필터
@@ -257,11 +260,8 @@ export default {
         return
       // 패스할 시 결과화면 답변에 패스로 저장
       this.input = "패스"
-      // 새 랜덤 국기 불러오기
-      this.getRandomFlag().then(() => {
-        // 초기화
-        this.init()
-      })
+      // 초기화
+      this.init()
       // 오답처리
       this.filterAnswer("wrong")
     },
@@ -312,6 +312,7 @@ export default {
   .front {
     transform: rotateY(0deg);
     border: 1px solid #ddd;
+    background: #ddd;
   }
 
   .back {
