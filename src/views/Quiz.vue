@@ -162,7 +162,7 @@ export default {
 
           // 컴포넌트 내 변수에 데이터 할당
           this.dataItmes = data
-          console.log(this.dataItmes)
+          // console.log(this.dataItmes)
 
           // 처음에 데이터 가져온 후 초기화 함수 호출
           this.init()
