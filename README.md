@@ -16,7 +16,7 @@ netlify url : https://stoic-mestorf-566c14.netlify.app/ <br>
 3. style : SCSS
 4. ui framework : Element ui
 
-# 주요기능
+# 주요 기능
 
 1. 오픈 api에서 받아온 데이터로 국기 이미지 랜덤 출력
 2. 정답/오답 체크 및 결과 저장 후 출력
