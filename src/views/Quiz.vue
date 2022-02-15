@@ -1,5 +1,6 @@
 <template>
-  <div class="content quiz">
+  <div class="content quiz" v-loading="loading">
+    <!-- <p v-if="loading">로딩</p> -->
     <!-- 문제 넘버 -->
     <h1 class="title">
       QUIZ <span class="num" v-text="quizCnt"></span> /
@@ -103,6 +104,7 @@ import { mapState, mapMutations } from "vuex"
 export default {
   data() {
     return {
+      loading: false,
       dataItmes: [],
       quizCnt: "0",
       flagImage: "",
@@ -130,7 +132,7 @@ export default {
 
     // 초기화
     init() {
-      // 랜덤 데이터 추출
+      // 국기 이미지 초기화 : 랜덤 데이터 추출
       this.getRandomFlag()
 
       // 힌트 초기화
@@ -145,7 +147,25 @@ export default {
     },
 
     // 데이터 페치
+    // fetchData() {
+    //   // http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=인증키(URL Encode)&pageNo=1&numOfRows=10&cond[country_nm::EQ]=가나&cond[country_iso_alp2::EQ]=GH
+    //   const myKey =
+    //     "myEKkrNA12FMXdmrvXUyQkc2bxaUAaz4zaub1rcC5AEjteRvgHPPaQfk43RPpMxxr8aTbAXJO8mr%2Fa1ipxYwSA%3D%3D"
+    //   const dataLength = 196
+
+    //   axios.get(
+    //     `//apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${myKey}&pageNo=1&numOfRows=${dataLength}`
+    //   )
+    // },
+
+    // 데이터 페치
     fetchData() {
+      // 로딩 중 해당 함수 중지
+      if (this.loading) return
+
+      // 로딩
+      this.loading = true
+
       // http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=인증키(URL Encode)&pageNo=1&numOfRows=10&cond[country_nm::EQ]=가나&cond[country_iso_alp2::EQ]=GH
       const myKey =
         "myEKkrNA12FMXdmrvXUyQkc2bxaUAaz4zaub1rcC5AEjteRvgHPPaQfk43RPpMxxr8aTbAXJO8mr%2Fa1ipxYwSA%3D%3D"
@@ -158,14 +178,15 @@ export default {
         .then((response) => {
           // 국기 데이터
           const { data } = response.data
-          // return data
 
           // 컴포넌트 내 변수에 데이터 할당
           this.dataItmes = data
-          // console.log(this.dataItmes)
 
           // 처음에 데이터 가져온 후 초기화 함수 호출
           this.init()
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
 
