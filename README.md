@@ -15,6 +15,7 @@ netlify url : https://stoic-mestorf-566c14.netlify.app/ <br>
 2. js framework : Vue.js
 3. style : SCSS
 4. ui framework : Element ui
+5. hosting : netlify
 
 # 주요 기능
 
