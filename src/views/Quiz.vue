@@ -132,6 +132,11 @@ export default {
 
     // 초기화
     init() {
+      // input 초기화(포커스)
+      this.input = ""
+      this.$refs.input.focus()
+      // this.$nextTick(() => this.$refs.input.focus())
+
       // 국기 이미지 초기화 : 랜덤 데이터 추출
       this.getRandomFlag()
 
@@ -140,10 +145,6 @@ export default {
 
       // 정/오답 부모 엘리먼트 초기화
       this.isCheckAnswer = false
-
-      // input 초기화(포커스)
-      this.input = ""
-      this.$nextTick(() => this.$refs.input.focus())
     },
 
     // 데이터 페치
