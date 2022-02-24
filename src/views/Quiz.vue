@@ -173,17 +173,19 @@ export default {
 
       axios
         .get(
-          `//apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${myKey}&pageNo=1&numOfRows=${dataLength}`
+          `http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${myKey}&pageNo=1&numOfRows=${dataLength}`
         )
         .then((response) => {
-          // 국기 데이터
-          const { data } = response.data
+          if (response) {
+            // 국기 데이터
+            const { data } = response.data
 
-          // 컴포넌트 내 변수에 데이터 할당
-          this.dataItmes = data
+            // 컴포넌트 내 변수에 데이터 할당
+            this.dataItmes = data
 
-          // 처음에 데이터 가져온 후 초기화 함수 호출
-          this.init()
+            // 처음에 데이터 가져온 후 초기화 함수 호출
+            this.init()
+          }
         })
         .finally(() => {
           this.loading = false
