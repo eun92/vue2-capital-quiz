@@ -3,7 +3,7 @@
 ### 세계 국기 퀴즈<br>
 
 국기 이미지를 보고 국가 이름을 맞추는 미니 퀴즈 게임<br>
-netlify url : https://stoic-mestorf-566c14.netlify.app/ <br>
+firebase url : https://vue2-country-quiz.web.app/ <br>
 ** https, http 혼합된 컨텐츠 문제 해결이 완벽히 되지 않아 크롬 웹브라우저에서 오픈 요망<br>
 ** 임시방편: 퀴즈 화면 주소창에 주의요함 클릭 -> 사이트 설정 클릭 -> 안전하지 않은 콘텐츠 '허용'선택해야 잘 동작)<br>
 
@@ -15,7 +15,7 @@ netlify url : https://stoic-mestorf-566c14.netlify.app/ <br>
 2. js framework : Vue.js
 3. style : SCSS
 4. ui framework : Element ui
-5. hosting : netlify
+5. hosting : firebase
 
 # 주요 기능
 
