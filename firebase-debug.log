@@ -1,0 +1,210 @@
+[debug] [2022-02-24T07:41:37.830Z] ----------------------------------------------------------------------
+[debug] [2022-02-24T07:41:37.831Z] Command:       /Users/eun/.nvm/versions/node/v12.22.8/bin/node /Users/eun/.nvm/versions/node/v12.22.8/bin/firebase init
+[debug] [2022-02-24T07:41:37.832Z] CLI Version:   10.2.1
+[debug] [2022-02-24T07:41:37.832Z] Platform:      darwin
+[debug] [2022-02-24T07:41:37.832Z] Node Version:  v12.22.8
+[debug] [2022-02-24T07:41:37.832Z] Time:          Thu Feb 24 2022 16:41:37 GMT+0900 (GMT+09:00)
+[debug] [2022-02-24T07:41:37.832Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-24T07:41:37.896Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-24T07:41:37.896Z] > authorizing via signed-in user (qoo0131@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/eun/Desktop/toy-project/vue2-country-quiz
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-02-24T07:41:41.397Z] Using project from CLI flag: vue2-country-quiz
+[debug] [2022-02-24T07:41:41.400Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vue2-country-quiz [none]
+[debug] [2022-02-24T07:41:41.946Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vue2-country-quiz 200
+[debug] [2022-02-24T07:41:41.946Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vue2-country-quiz {"projectId":"vue2-country-quiz","projectNumber":"367804403893","displayName":"vue2-country-quiz","name":"projects/vue2-country-quiz","resources":{"hostingSite":"vue2-country-quiz"},"state":"ACTIVE"}
+[info] i  Using project vue2-country-quiz (vue2-country-quiz) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] i  Skipping write of public/404.html 
+[debug] [2022-02-24T07:41:49.743Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-02-24T07:41:49.922Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-02-24T07:41:49.923Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.7","browserURL":"https://www.gstatic.com/firebasejs/9.6.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.7/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.7/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.7/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.7/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.7/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.7/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.7/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.7/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.7/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.7/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/eun/Desktop/toy-project/vue2-country-quiz 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=1069542049&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-02-24T07:41:52.699Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"4ca072eb08cfc3ed1e43","redirect_uri":"http://localhost:9005","state":"1069542049"}
+[debug] [2022-02-24T07:41:53.029Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Thu, 24 Feb 2022 07:41:55 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"dab8cdd229cff772015ac9b62ac7eb19\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com collector.github.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com collector.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"FB56:157C:6B789C:7D18D0:621736C2"}
+[debug] [2022-02-24T07:41:53.051Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-02-24T07:41:53.347Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-02-24T07:41:53.348Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"eun92","id":62632252,"node_id":"MDQ6VXNlcjYyNjMyMjUy","avatar_url":"https://avatars.githubusercontent.com/u/62632252?v=4","gravatar_id":"","url":"https://api.github.com/users/eun92","html_url":"https://github.com/eun92","followers_url":"https://api.github.com/users/eun92/followers","following_url":"https://api.github.com/users/eun92/following{/other_user}","gists_url":"https://api.github.com/users/eun92/gists{/gist_id}","starred_url":"https://api.github.com/users/eun92/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/eun92/subscriptions","organizations_url":"https://api.github.com/users/eun92/orgs","repos_url":"https://api.github.com/users/eun92/repos","events_url":"https://api.github.com/users/eun92/events{/privacy}","received_events_url":"https://api.github.com/users/eun92/received_events","type":"User","site_admin":false,"name":"Jeongeun Lee","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":14,"public_gists":0,"followers":0,"following":0,"created_at":"2020-03-25T02:34:31Z","updated_at":"2022-02-24T06:39:41Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":14434,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as eun92 
+[info] 
+[debug] [2022-02-24T07:42:03.385Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:03.643Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:03.644Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:42:06.000Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:06.305Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:06.305Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:42:10.979Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:11.325Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:11.326Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:42:16.097Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:16.443Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:16.444Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:42:22.241Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:22.505Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:22.505Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:42:43.714Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:44.095Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:44.096Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:42:46.106Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:46.448Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:46.448Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:42:57.248Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:42:57.612Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:42:57.612Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:03.418Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:03.755Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:03.755Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:25.009Z] ----------------------------------------------------------------------
+[debug] [2022-02-24T07:43:25.010Z] Command:       /Users/eun/.nvm/versions/node/v12.22.8/bin/node /Users/eun/.nvm/versions/node/v12.22.8/bin/firebase init
+[debug] [2022-02-24T07:43:25.011Z] CLI Version:   10.2.1
+[debug] [2022-02-24T07:43:25.011Z] Platform:      darwin
+[debug] [2022-02-24T07:43:25.011Z] Node Version:  v12.22.8
+[debug] [2022-02-24T07:43:25.011Z] Time:          Thu Feb 24 2022 16:43:25 GMT+0900 (GMT+09:00)
+[debug] [2022-02-24T07:43:25.011Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-24T07:43:25.077Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-24T07:43:25.078Z] > authorizing via signed-in user (qoo0131@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/eun/Desktop/toy-project/vue2-country-quiz
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-02-24T07:43:28.095Z] Using project from CLI flag: vue2-country-quiz
+[debug] [2022-02-24T07:43:28.098Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vue2-country-quiz [none]
+[debug] [2022-02-24T07:43:28.648Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vue2-country-quiz 200
+[debug] [2022-02-24T07:43:28.649Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vue2-country-quiz {"projectId":"vue2-country-quiz","projectNumber":"367804403893","displayName":"vue2-country-quiz","name":"projects/vue2-country-quiz","resources":{"hostingSite":"vue2-country-quiz"},"state":"ACTIVE"}
+[info] i  Using project vue2-country-quiz (vue2-country-quiz) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] i  Skipping write of public/404.html 
+[debug] [2022-02-24T07:43:35.372Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-02-24T07:43:36.581Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-02-24T07:43:36.581Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.7","browserURL":"https://www.gstatic.com/firebasejs/9.6.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.7/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.7/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.7/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.7/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.7/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.7/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.7/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.7/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.7/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.7/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/eun/Desktop/toy-project/vue2-country-quiz 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=624133514&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-02-24T07:43:39.196Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"d5ae1d8a26316727b0d0","redirect_uri":"http://localhost:9005","state":"624133514"}
+[debug] [2022-02-24T07:43:39.596Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Thu, 24 Feb 2022 07:43:41 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"34f385990274ffedb4389d35c5967d07\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com collector.github.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com collector.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"FB67:2D91:C8E3C:FC179:6217372D"}
+[debug] [2022-02-24T07:43:39.623Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-02-24T07:43:39.913Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-02-24T07:43:39.914Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"eun92","id":62632252,"node_id":"MDQ6VXNlcjYyNjMyMjUy","avatar_url":"https://avatars.githubusercontent.com/u/62632252?v=4","gravatar_id":"","url":"https://api.github.com/users/eun92","html_url":"https://github.com/eun92","followers_url":"https://api.github.com/users/eun92/followers","following_url":"https://api.github.com/users/eun92/following{/other_user}","gists_url":"https://api.github.com/users/eun92/gists{/gist_id}","starred_url":"https://api.github.com/users/eun92/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/eun92/subscriptions","organizations_url":"https://api.github.com/users/eun92/orgs","repos_url":"https://api.github.com/users/eun92/repos","events_url":"https://api.github.com/users/eun92/events{/privacy}","received_events_url":"https://api.github.com/users/eun92/received_events","type":"User","site_admin":false,"name":"Jeongeun Lee","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":14,"public_gists":0,"followers":0,"following":0,"created_at":"2020-03-25T02:34:31Z","updated_at":"2022-02-24T06:39:41Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":107102,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as eun92 
+[info] 
+[debug] [2022-02-24T07:43:53.727Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:54.036Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:54.037Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:54.368Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:54.649Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:54.649Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:54.750Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:55.005Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:55.005Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:55.020Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:55.186Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:55.265Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:55.266Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:55.374Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:55.419Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:55.420Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-02-24T07:43:55.579Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:55.617Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:55.618Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:55.821Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:55.822Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-02-24T07:43:56.148Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:56.435Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:56.435Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:56.456Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:56.796Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:56.796Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:56.918Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:57.082Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:57.168Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:57.169Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:57.234Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:57.319Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:57.320Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-02-24T07:43:57.374Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:57.485Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:57.486Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:43:57.505Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:43:57.615Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:57.615Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-02-24T07:43:57.754Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:43:57.755Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:44:03.554Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz /actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:44:03.865Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz /actions/secrets/public-key 404
+[debug] [2022-02-24T07:44:03.866Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz /actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:44:04.470Z] >>> [apiv2][query] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:44:04.625Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-02-24T07:44:04.729Z] <<< [apiv2][status] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key 404
+[debug] [2022-02-24T07:44:04.729Z] <<< [apiv2][body] GET https://api.github.com/repos/eun92/vue2-country-quiz/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-02-24T07:44:04.864Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-02-24T07:44:04.864Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
