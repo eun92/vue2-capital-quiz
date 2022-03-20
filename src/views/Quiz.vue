@@ -174,7 +174,7 @@ export default {
 
       axios
         .get(
-          `http://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${myKey}&pageNo=1&numOfRows=${dataLength}`
+          `//apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${myKey}&pageNo=1&numOfRows=${dataLength}`
         )
         .then((response) => {
           if (response) {
